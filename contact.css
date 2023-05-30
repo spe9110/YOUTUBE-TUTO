@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=EB+Garamond:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Oxygen:wght@300;400;700&family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@400;500;700;900&family=Rochester&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* base style */
+body {
+    min-height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(90deg, rgba(241,51,128,0.4261904590937937) 0%, rgba(238,32,32,0.9920167896260067) 0%, rgba(249,241,248,0.19089634144673495) 49%, rgba(32,140,238,1) 100%), url(https://images.unsplash.com/photo-1492217072584-7ff26c10eb75?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YW1lcmljYW4lMjBmcmVlZG9tJTIwc3RhdHVlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+}
+section {
+    width: 90vw;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: -4px 3px 8px -1px rgba(0,0,0,0.38);
+}
+section .container {
+    width: 90vw;
+    height: auto;
+    background-color: #fff;
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    gap: 10px;
+}
+/* contact-info */
+.contact-info {
+    width: 50%;
+    height: 100%;
+    padding: 2em 1em;
+    display: grid;
+    gap: 2rem;
+    background-color: #fee2e2;
+}
+.contact-info .title h3 {
+    font-size: 3rem;
+    font-weight: bold;
+    padding-bottom: 0.1em;
+}
+.contact-info .title p {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.contact-info .adress {
+    display: grid;
+    gap: 0.8rem;
+}
+
+.main-location,
+.adress-mail,
+.number {
+    display: flex;
+    align-items: start;
+    gap: 0.8rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.social-media {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.social-media i {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.social-media i:hover {
+    transform: scale(1.25);
+    transition-duration: 0.5s;
+}
+.social-media i.fa-instagram:hover {
+    color: #C13584
+}
+.social-media i.fa-whatsapp:hover {
+    color: #25d366
+}
+.social-media i.fa-twitter:hover {
+    color: #1DA1F2
+}
+.social-media i.fa-facebook:hover {
+    color: #1877F2
+}
+
+/* form container */
+.contact-form-container {
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    padding: 0 1em;
+    position: relative;
+    z-index: 20;
+    overflow: hidden;
+}
+.contact-form-container .main-form {
+    display: grid;
+    gap: 1.5rem;
+    padding: 1em;
+}
+.main-form .form-control input, textarea {
+    width: 100%;
+    padding: 0.7em;
+    border-radius: 5px;
+    border: 1px solid #D1D5D8;
+    outline: none;
+    cursor: pointer;
+}
+input::placeholder,
+textarea::placeholder {
+    color: #777;
+}
+.main-form .form-control input:focus, textarea:focus {
+    outline: none;
+    border: 2px solid #777;
+}
+
+.main-form .form-submit .submit-btn{
+    width: 100%;
+    background-color: #93c5fd;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    text-transform: uppercase;
+    transition-duration: 0.5s;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.main-form .form-submit .submit-btn:hover {
+    background-color: #2563eb;
+}
+.design .design-left {
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    background-color: #4079f3;
+    border-radius: 50%;
+    bottom: -3rem;
+    left: -2rem;
+    opacity: 0.3;
+    z-index: -10;
+}
+.design .design-right {
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    background-color: #4079f3;
+    border-radius: 50%;
+    top: -3rem;
+    right: -2rem;
+    opacity: 0.3;
+    z-index: -10;
+}
+
+/* small device */
+@media(max-width:480px) {
+    section .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.6rem;
+    }
+
+    .contact-form-container,
+    .contact-info {
+        width: 100%;
+    }
+    .contact-form-container .main-form {
+        display: grid;
+        gap: 1rem;
+        padding: 0.5em;
+    }
+    .design .design-right,
+    .design .design-left {
+        width: 5rem;
+        height: 5rem;
+    }
+}

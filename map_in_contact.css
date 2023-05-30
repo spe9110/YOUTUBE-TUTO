@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300&family=Nunito+Sans:ital,wght@0,500;0,600;0,700;0,800;0,900;0,1000;1,300;1,400&family=Quicksand:wght@300;500;600;700&family=Roboto:wght@300;400&family=Yesteryear&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+/* base style */
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: beige;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* container */
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container h1 {
+    font-size: 3rem;
+    padding-bottom: 0.5em;
+    font-weight: 800;
+}
+.map {
+    width: 70vw;
+    height: 500px;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+/* small device */
+
+@media(max-width: 480px) {
+    .container h1 {
+        font-size: 2rem;
+        text-align: center;
+        font-weight: 800;
+    }
+    .map {
+        width: 90vw;
+        height: 80%;
+    }
+}
+/* tablets */
+@media (min-width: 481px) and (max-width: 768px){
+    .container h1 {
+        font-size: 2.5rem;
+        text-align: center;
+        font-weight: 800;
+    }
+    .map {
+        width: 90vw;
+        height: 60%;
+    }
+}
+
+/* laptop */
+@media (max-width: 920px) {
+    .container h1 {
+        font-size: 3rem;
+        text-align: center;
+        font-weight: 800;
+    }
+    .map {
+        width: 70vw;
+        height: 500px;
+    }
+}
